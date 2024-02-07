@@ -118,14 +118,19 @@ function listenKeys() {
 }
 
 function load() {
-    const url = document.getElementById("url").textContent
+    const input = document.getElementById("url")
+    const url = input?.value || input.placeholder
     fetch(url)
         .then(response => response.text())
-        .then(text => parseFile(text))
-        .then(presentation => display(presentation))
+        .then(text => display(parseFile(text)))
         .catch(error => {
             display({ config: { fg: "red", fonts: ["sans-serif"] }, slides: [{ type: "text", text: error }] })
             console.error(error)
         })
+    // set imagepath
+    imagePath = url.slice(0, url.lastIndexOf("/") + 1)
+    const fileName = url.slice(url.lastIndexOf("/") + 1)
+    const deckName = fileName.slice(0, fileName.lastIndexOf("."))
+    document.title = `breeze: ${deckName}`
     document.getElementById("load-url").remove()
 }

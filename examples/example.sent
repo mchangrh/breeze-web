@@ -19,8 +19,13 @@ Why?
 Images are simple:
 
 @1f343_twemoji.png
+Relative links work
 This text will not be displayed, since the @ at the start of the first line
 makes this paragraph an image slide.
+
+@https://mchangrh.github.io/breeze-web/examples/fe0f_twemoji.png
+And so do absolute links
+This text will also be ommitted since this paragraph is an image slide
 
 The text-based sent format:
 - Keeps the focus on the content;
@@ -36,8 +41,7 @@ What you see is what you get:
 The text is displayed exactly as you typed it;
 No wrapping is done automatically
 
-Usage:
-tbd
+Usage: https://mchangrh.github.io/breeze-web/
 
 - One slide per paragraph;
 - Lines starting with # are ignored;

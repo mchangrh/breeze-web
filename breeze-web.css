@@ -1,6 +1,7 @@
 html {
     scroll-snap-type: y mandatory;
     overflow: scroll;
+    cursor: default;
 }
 body {
     margin: 0;
@@ -31,9 +32,13 @@ body {
     width: 75vw;
     height: 75vh;
 }
+.textbox::selection {
+    background-color: transparent;
+}
 img {
     object-fit: scale-down;
     object-position: 50% 50%;
+    height: 100%;
     max-width: 100%;
     max-height: 100%;
 }
