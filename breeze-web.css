@@ -1,0 +1,39 @@
+html {
+    scroll-snap-type: y mandatory;
+    overflow: scroll;
+}
+body {
+    margin: 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.slide, .content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.slide {
+    scroll-snap-align: start;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: -100vw;
+    z-index: 0;
+    background-color: transparent;
+    white-space: pre;
+}
+.content {
+    width: 75vw;
+    height: 75vh;
+}
+img {
+    object-fit: scale-down;
+    object-position: 50% 50%;
+    max-width: 100%;
+    max-height: 100%;
+}
